@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:notes/Widgets/Add_Model_Bottom_Sheet.dart';
 import 'package:notes/Widgets/Custom_Notes_Niew.dart';

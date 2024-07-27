@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes/Cubits/Notes_Cubit/Notes_Cubit.dart';
@@ -30,6 +32,13 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
     contentController = TextEditingController(text: widget.note.subtitle);
   }
 
+@override
+dispose(){
+  titleController.dispose();
+  contentController.dispose();
+  super.dispose();
+  
+}
   @override
   Widget build(BuildContext context) {
     return Padding(

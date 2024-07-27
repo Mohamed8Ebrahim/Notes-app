@@ -1,4 +1,5 @@
-// NotesCubit
+// ignore_for_file: file_names
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:notes/Constants.dart';
@@ -23,7 +24,7 @@ class NotesCubit extends Cubit<NotesState> {
     }
 
     // Filter notes based on the search query
-    final List<NotesModel>? filteredNotes = noteList!
+    final List<NotesModel> filteredNotes = noteList!
         .where((note) => note.title.toLowerCase().contains(query.toLowerCase()))
         .toList();
 
